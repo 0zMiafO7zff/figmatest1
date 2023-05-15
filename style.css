@@ -1,0 +1,1040 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        margin: 0 2rem;
+    }
+}
+/* -------------------------------------------- NAVBAR -------------------------------------------- */
+nav {
+    position: fixed;
+    width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    z-index: 100;
+    top: 0;
+    transition: top 0.5s;
+}
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.menu-logo {
+    font-size: 18px;
+}
+
+.menu-logo i {
+    color: rgb(66, 182, 134);
+    margin-right: 8px;
+}
+
+.menu-item ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item ul li a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-item a:hover {
+    color: rgb(39, 201, 142);
+    transition: .2s ease;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    font-size: 30px;
+    color: rgb(66, 182, 134);
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+.nav-toggle-exit {
+    position: absolute;
+    top: 33px;
+    left: 25px;
+    font-size: 34px;
+    color: rgb(66, 182, 134);
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+}
+
+/* @media screen and (max-width:480px) {
+    .menu-list {
+        width: 80%;
+    }
+} */
+
+@media screen and (max-width:768px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        top: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .menu-list {
+        position: absolute;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        padding: 1rem;
+        display: none;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.963);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .active-none {
+        display: none;
+    }
+
+    .menu-item ul {
+        flex-direction: column;
+    }
+
+    .menu-item ul li {
+        margin: 2rem 0;
+    }
+
+    .menu-logo {
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+    
+}
+/* -------------------------------------------- WELCOME -------------------------------------------- */
+
+header {
+    margin-top: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        margin-top: 4rem;
+    }
+}
+.welcome-info {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-main {
+    margin: 6rem 0;
+
+}
+
+.welcome-head h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin: 2rem 0;
+}
+
+.welcome-text {
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.welcome-btn {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: rgb(66, 182, 134);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.welcome-btn:hover {
+    color: rgb(66, 182, 134);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: .2s ease;
+}
+
+.welcome-img {
+    width: 80%;
+    margin: auto 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-head h1 {
+        font-size: 48px;
+    }
+
+    .welcome-text {
+        font-size: 18px;
+    }
+
+    .welcome-btn {
+       width: 100%;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    header {
+        margin-top: -6rem;
+    }
+    .welcome-info {
+        flex-direction: column;
+    }
+    .welcome-head h1 {
+        font-size: 40px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+    .welcome-btn {
+        font-size: 14px;
+    }
+}
+
+
+/* -------------------------------------------- SECTION WORK -------------------------------------------- */
+
+.work {
+    margin: 6rem 0;
+}
+.head-section {
+    text-align: center;
+    font-size: 26px;
+}
+
+.head-section h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.work-info {
+    text-align: center;
+}
+
+.work-text {
+    margin: 2rem 310px;
+}
+
+.work-card {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+}
+
+.card-list {
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 60px;
+    color: rgb(66, 182, 134);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-head {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 1rem 0;
+}
+
+.card-bio {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .work-text {
+        margin: 4rem 2rem;
+    }
+    .work-card {
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .head-section {
+        text-align: center;
+        font-size: 20px;
+    }
+    .work-text {
+        margin: 2rem 1rem;
+    }
+    .work-card {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+    }
+    .card-icon {
+        font-size: 40px;
+    }
+    
+    .card-head {
+        font-size: 16px;
+        margin: .5rem 0;
+    }
+    
+    .card-bio {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+/* -------------------------------------------- SECTION KICK -------------------------------------------- */
+
+.kick {
+    margin: 6rem 0;
+}
+
+.kick-info {
+    display: grid;  
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 6rem;
+    align-items: center;
+    position: relative;
+    height: 400px;
+}
+
+/* ---------- Text ---------- */
+.kick-text h1 {
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.kick-text p {
+    margin: 1rem 0;
+}
+/* ---------- Box ---------- */
+.kick-box {
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 400px;
+    padding: 1rem;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    z-index: 10;
+    background: #fff;
+}
+.kick-background {
+    background: rgb(66, 182, 134);
+    border-radius: 10px;
+    width: 400px;
+    height: 345px;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    z-index: 1;
+}
+.kick-box h2 {
+    margin: 1rem 0;
+}
+
+.kick-member {
+    display: flex;
+    flex-direction: column;
+}
+
+.kick-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.member-info {
+    display: flex;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .kick-info {
+        grid-gap: 2rem;
+    }
+    .kick-text h1 {
+        font-size: 32px;
+    }
+    .kick-box {
+        width: 350px;
+        top: 30px;
+        right: 10px;
+        z-index: 10;
+    }
+    .kick-background {
+        width: 350px;
+        height: 345px;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .kick-info {
+        display: grid;  
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-flow: column-reverse;
+        position: relative;
+        height: 700px;
+        align-items: none;
+    }
+
+    .kick-text {
+        top: 20px;
+        position: absolute;
+    }
+
+    .kick-text h1 {
+        text-align: center;
+    }
+    .kick-box {
+        width: 350px;
+        top: 320px;
+        right: 30px;
+        z-index: 10;
+    }
+    .kick-background {
+        width: 350px;
+        height: 345px;
+        position: absolute;
+        top: 327px;
+        right: 22px;
+        }
+}
+    
+    
+/* -------------------------------------------- SECTION ONBOARD -------------------------------------------- */
+
+.onboard {
+    margin: 6rem 0;
+}
+
+.onboard-info {
+    display: grid;  
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.onboard-box {
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 350px;
+    margin-left: 4rem;
+}
+
+.onboard-box-head {
+    display: flex;
+    flex-direction: row;
+}
+
+.onboard-box-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.onboard-box-member h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.onboard-box-member p {
+    font-size: 14px;
+}
+
+.onboard-box-bio {
+    margin: 1rem 0;
+    font-size: 14px;
+}
+
+.onboard-box-check {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.onboard-box-check-list h5 {
+    text-transform: uppercase;
+    color: rgb(152, 154, 155);
+}
+
+.onboard-box-check-list p {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.onboard-box-btn {
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    background: #000;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.onboard-box-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.onboard-text h1 {
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.onboard-text p {
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .onboard-box {
+        width: 300px;
+        margin-left: 0;
+    }
+    .onboard-text h1 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .onboard-info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .onboard-box {
+        margin-top: 4rem;
+    }
+}
+/* -------------------------------------------- SECTION ENGAGE -------------------------------------------- */
+
+.engage {
+    margin: 6rem 0;
+}
+
+.engage-info {
+    display: grid;  
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.engage-text h1 {
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.engage-text p {
+    margin: 1rem 0;
+}
+
+.engage-box {
+    position: relative;
+    height:430px;
+}
+
+.engage-box-write {
+    position: absolute;
+    padding: 1rem;
+    background: #fff;
+    border: 3px solid #000;
+    width: 480px;
+    left: 55px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.engage-box-write p {
+    margin: 1rem 0;
+    width: 70%;
+}
+
+.engage-box-btn {
+    position: absolute;
+    background: rgb(66, 182, 134);
+    color: white;
+    text-align: center;
+    z-index: 3;
+    padding: .5rem 1rem;
+    border-radius: 100px;
+    right: 75px;
+    top: 15px;
+}
+
+.engage-box-background {
+    position: absolute;
+    width: 460px;
+    background: rgb(66, 182, 134);
+    z-index: 1;
+    height: 100px;
+    top: 51px;
+    left: 65px;
+    border-radius: 10px;
+}
+
+.engage-box-app {
+    position: absolute;
+    border: 3px solid #000;
+    background: #f9ede0;
+    border-radius: 10px;
+    padding: .5rem 2rem;
+    width: 350px;
+    bottom: 30px;
+}
+
+.engage-box-app h3 {
+    letter-spacing: 2px;
+    margin: .5rem 0;
+}
+
+.engage-box-app-member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.engage-box-app-member-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.engage-box-app-member-user {
+    display: flex;
+    align-items: center;
+}
+
+.engage-point i {
+    color: gold;
+    margin-right: 5px;
+}
+
+.engage-box-your {
+    position: absolute;
+    border: 3px solid rgb(66, 182, 134);
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+.engage-box-your img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.your-name {
+    margin: .5rem 0;
+    font-weight: bold;
+}
+
+.your-work {
+    color: #9a9797;
+    font-size: 14px;
+}
+
+.engage-box-your-status {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.engage-box-your-status p i {
+    color: gold;
+}
+
+.your-btn {
+    background: #000;
+    padding: .5rem 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.your-btn:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: .2s ease;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .engage-info {
+        display: grid;  
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .engage-text h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .engage-box-write {      
+        left: 90px;
+    }
+    
+    .engage-box-btn {    
+        right: 140px;
+    }
+
+    .engage-box-background {
+        left: 100px;
+    }
+
+    .engage-box-app {
+        left: 50px;
+    }
+
+    .engage-box-your {
+        right: 50px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .engage-box {
+        position: relative;
+        height:700px;
+        margin-top: 2rem;
+    }
+    .engage-box-write {      
+        left: 0;
+        width: 100%
+    }
+    .engage-box-btn {    
+        right: 25px;
+        font-size: 12px;
+    }
+    .engage-box-background {
+        top: 20px;
+        width: 95%;
+        height: 150px;
+        left: 10px;
+    }
+    .engage-box-app {
+        left: 25px;
+        bottom: 270px;
+    }
+    .engage-box-your {
+        right: 95px;
+    }
+}
+/* -------------------------------------------- SECTION HELP -------------------------------------------- */
+
+.help {
+    margin: 6rem 0;
+}
+
+.help-head {
+    text-align: center;
+}
+
+.help-head h1{
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.help-head p {
+    margin: 1.5rem auto;
+    width: 800px;
+}
+
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+}
+
+.help-list {
+    margin: 2rem 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.help-list-head {
+    font-weight: bold;
+}
+
+.help-list-bio {
+    margin: 1rem 0;
+}
+
+.help-status {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.help-btn {
+    padding: .5rem 1rem;
+    background: rgb(66, 182, 134);
+    border-radius: 20px;
+    color: white;
+}
+
+.help-foot {
+    text-align: center;
+    background-color: #000;
+    padding: 1rem;
+    width: 120px;
+    border-radius: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.help-foot a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .help {
+        margin: 4rem 0;
+        overflow: hidden;
+    }
+    .help-head h1{
+        font-size: 32px;
+    }
+
+    .help-head p {
+        margin:1rem auto;
+        width: 600px;
+    }
+    .help-grid {
+        grid-gap: 1rem;
+    }
+
+    .help-status {
+        flex-direction: column;
+    }
+    
+    .help-btn {
+        padding: .5rem 1rem;
+        background: rgb(66, 182, 134);
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        width: 100px;
+        margin: 1rem auto;
+    }
+
+    .help-date {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+    .help-head h1{
+        font-size: 28px;
+    }
+    .help-head p {
+        margin:1rem auto;
+        font-size: 14px;
+        width: 400px;
+    }
+    .help-head {
+        margin-bottom: 2rem;
+    }
+    .help-grid {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 1rem;
+    }
+    .help-list {
+        margin: 1rem 0;
+        background: #fff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+}
+/* -------------------------------------------- SECTION HELP -------------------------------------------- */
+.start {
+    margin: 6rem 0;
+}
+
+.start-info {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2rem;
+}
+
+.start-img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.start-text h1 {
+    font-size: 40px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.start-text p {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.start-btn {
+    padding: 1rem;
+    background: rgb(66, 182, 134);
+    border-radius: 10px;
+    border: none;
+    margin: 1rem 0;
+}
+
+.start-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width:480px) {
+    .start-info {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .start-text h1 {
+        font-size: 28px;
+    }
+    
+    .start-text p {
+        font-size: 14px;
+    }
+    
+    .start-btn {
+        padding: 1rem;
+        background: rgb(66, 182, 134);
+        border-radius: 10px;
+        border: none;
+        margin: 1rem 0;
+        font-size: 12px;
+    }
+    
+}
+
+/* -------------------------------------------- SECTION ENGAGE -------------------------------------------- */
+
+
+footer {
+    margin: 2rem;
+}
+.foot-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.foot-list li a {
+    text-decoration: none;
+    margin-left: 2rem;
+    color: black;
+}
+
+.foot-list li a:hover {
+    color: rgb(66, 182, 134);
+}
+
+.foot-list:last-child {
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        margin: 1rem;
+        font-size: 12px;
+    }
+    .foot-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot-icon {
+        margin-bottom: 1rem;
+    }
+}
